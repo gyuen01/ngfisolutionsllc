@@ -1,0 +1,32 @@
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50 w-full">
+    <div class="max-w-[95%] mx-auto px-4 md:px-6 flex justify-between items-center h-20">
+        
+        <div class="text-xl md:text-2xl font-bold tracking-tighter text-frb-green whitespace-nowrap">
+            <a href="/">NGFI <span class="text-frb-gold">SOLUTIONS</span></a>
+        </div>
+        
+        <button id="menu-btn" class="md:hidden text-frb-green p-2 focus:outline-none" aria-label="Toggle Menu">
+            <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold text-frb-green items-center">
+            <a href="/index.html" class="hover:text-frb-gold transition">Home</a>
+            <a href="/who-we-are" class="{% if page.url == '/who-we-are/' %}text-frb-gold border-b-2 border-frb-gold{% else %}hover:text-frb-gold{% endif %} transition">Who We Are</a>
+            <a href="/our-approach" class="{% if page.url == '/our-approach/' %}text-frb-gold border-b-2 border-frb-gold{% else %}hover:text-frb-gold{% endif %} transition">Our Approach</a>
+            <a href="/our-people" class="{% if page.url == '/our-people/' %}text-frb-gold border-b-2 border-frb-gold{% else %}hover:text-frb-gold{% endif %} transition border-l border-gray-200 pl-8">Our People</a>
+            <a href="/contact" class="text-white bg-frb-green px-5 py-2.5 rounded-sm hover:bg-emerald-900 transition font-bold uppercase tracking-widest text-[10px]">Contact</a>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 w-full shadow-inner">
+        <div class="flex flex-col space-y-4 p-8 text-center uppercase tracking-widest font-semibold text-frb-green">
+            <a href="/index.html" class="mobile-link py-2 border-b border-gray-50">Home</a>
+            <a href="/who-we-are" class="mobile-link py-2 border-b border-gray-50 {% if page.url == '/who-we-are/' %}text-frb-gold{% endif %}">Who We Are</a>
+            <a href="/our-approach" class="mobile-link py-2 border-b border-gray-50 {% if page.url == '/our-approach/' %}text-frb-gold{% endif %}">Our Approach</a>
+            <a href="/our-people" class="mobile-link py-2 border-b border-gray-50 {% if page.url == '/our-people/' %}text-frb-gold{% endif %}">Our People</a>
+            <a href="/contact" class="text-frb-gold py-2 font-bold">Contact</a>
+        </div>
+    </div>
+</nav>

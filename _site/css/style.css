@@ -1,0 +1,54 @@
+/* 1. Base Tailwind Directives */
+/* These allow Tailwind to process your utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Brand Variable Definitions */
+:root {
+    --frb-green: #004A32;
+    --frb-gold: #94794C;
+    --frb-eggshell: #F9F7F2;
+}
+
+/* 3. Global Base Styles */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+        @apply bg-frb-eggshell text-gray-800 font-sans;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-serif;
+    }
+}
+
+/* 4. Component Classes (The "Clean Code" Secret) */
+/* If you find yourself using the same 10 classes on every button, 
+   you can create a single shortcut class here. */
+@layer components {
+    .btn-primary {
+        @apply bg-frb-gold text-white px-8 py-4 font-bold uppercase tracking-widest text-[10px] 
+               hover:bg-opacity-90 transition-all shadow-md active:scale-95 text-center;
+    }
+
+    .btn-outline {
+        @apply border border-frb-green text-frb-green px-8 py-4 font-bold uppercase tracking-widest 
+               text-[10px] hover:bg-frb-green hover:text-white transition-all text-center;
+    }
+
+    .section-heading-gold {
+        @apply text-frb-gold font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4;
+    }
+}
+
+/* 5. Custom Utility Overrides */
+/* Use this for specialized tweaks like text shadows or unique gradients */
+.text-shadow-elegant {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
