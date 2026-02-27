@@ -1,8 +1,7 @@
 {
   "name": "ngfis",
   "version": "1.0.0",
-  "description": "",
-  "main": "eleventy.js",
+  "description": "NGFI Solutions LLC Website",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
@@ -10,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
 }
