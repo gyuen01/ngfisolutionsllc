@@ -1,12 +1,13 @@
 module.exports = function(eleventyConfig) {
-    // This tells Eleventy to copy your CSS and Images 
-    // directly to the finished site folder (_site)
-    eleventyConfig.addPassthroughCopy("src/images");
-    eleventyConfig.addPassthroughCopy("src/css");
+    // Only use "src/" if those folders actually exist inside a folder named src
+    // If they are in your main folder, use these:
+    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("css");
 
     return {
         dir: {
-            input: "src",    // This is the key fix!
+            input: ".",
+            includes: "_includes",
             output: "_site"
         }
     };
