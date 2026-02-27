@@ -1,14 +1,10 @@
 {
   "name": "ngfis",
   "version": "1.0.0",
-  "description": "NGFI Solutions LLC Website",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
