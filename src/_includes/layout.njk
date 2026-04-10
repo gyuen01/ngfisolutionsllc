@@ -8,18 +8,25 @@
     
     <meta name="description" content="NGFI Solutions LLC: Strategic AI transformation and institutional execution for the financial sector.">
     
+    <link rel="icon" type="image/png" href="/images/logo.jpg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
         html { scroll-behavior: smooth; overflow-x: hidden; }
         body { overflow-x: hidden; width: 100%; }
+        
+        /* Brand Colors */
         .bg-frb-green { background-color: #004A32; }
         .text-frb-green { color: #004A32; }
         .bg-frb-gold { background-color: #94794C; }
         .text-frb-gold { color: #94794C; }
         .bg-frb-eggshell { background-color: #F9F7F2; }
-        .font-serif { font-family: Georgia, serif; }
+        
+        /* Typography */
+        .font-serif { font-family: Georgia, 'Times New Roman', serif; }
     </style>
 </head>
 <body class="bg-frb-eggshell text-gray-800 font-sans">
@@ -37,19 +44,21 @@
         const menu = document.getElementById('mobile-menu');
         const menuPath = document.getElementById('menu-path');
 
-        btn.addEventListener('click', () => {
-            const isHidden = menu.classList.contains('hidden');
-            menu.classList.toggle('hidden');
-            if (isHidden) {
-                // Change to "X" icon
-                menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-            } else {
-                // Change back to "Hamburger" icon
-                menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-            }
-        });
+        if (btn) {
+            btn.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden');
+                if (isHidden) {
+                    // Change to "X" icon
+                    menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                } else {
+                    // Change back to "Hamburger" icon
+                    menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+                }
+            });
+        }
 
-        // Close menu when clicking a link (optional but recommended)
+        // Close menu when clicking a link
         document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
